@@ -77,6 +77,7 @@ class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
         do {
             whistlePlayer = try AVAudioPlayer(contentsOf: audioURL)
             whistlePlayer.play()
+            print("Play that sucker")
         } catch {
             let ac = UIAlertController(title: "Playback failed", message: "There was a problem playing your whistle; please try re-recording.", preferredStyle: .alert)
             
@@ -115,7 +116,7 @@ class RecordWhistleViewController: UIViewController, AVAudioRecorderDelegate {
             whistleRecorder = try AVAudioRecorder(url: audioURL, settings: settings)
             
             whistleRecorder.delegate = self
-//            whistleRecorder.record()
+            whistleRecorder.record()
             
         } catch {
             finishRecording(success: false)

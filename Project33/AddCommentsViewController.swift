@@ -21,12 +21,13 @@ class AddCommentsViewController: UIViewController, UITextViewDelegate {
         comments.translatesAutoresizingMaskIntoConstraints = false
         comments.delegate = self
         comments.font = UIFont.preferredFont(forTextStyle: .body)
+        comments.textColor = UIColor.gray
         view.addSubview(comments)
         
         comments.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         comments.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        comments.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        comments.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        comments.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        comments.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
     
